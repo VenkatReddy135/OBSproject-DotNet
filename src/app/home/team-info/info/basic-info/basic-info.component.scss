@@ -1,0 +1,31 @@
+@import "../../../../../styles.scss";
+
+.basic_info{
+    .card {
+        width: 45%;
+      }
+      .p-t-10{
+          padding-top: 10px;
+      }
+      .heading_underline{
+          border-bottom: 1px solid #70707029;
+      }
+      .m-b-0{
+          margin-bottom: 0rem;
+      }
+      .crd-hdng-fonts{
+          color: #161616;
+        font-weight: bold;
+      }
+      .padding_top_heading{
+          padding: 16px 48px 16px 48px;
+      }
+}
+
+@media(max-width:576px){
+    .basic_info{
+        .card{
+            width: 100%;
+        }
+    }
+}

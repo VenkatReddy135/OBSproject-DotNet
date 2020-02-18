@@ -1,0 +1,175 @@
+<div class="p-3">
+    <div class="container-fluid">
+    <section class="educa_info">
+        <div class="card p-3">
+            <section>
+                <h4 class="d-inline-block underline">Education Info</h4>
+                <i class="fa fa-download pull-right dwnld-icon" aria-hidden="true"></i>
+                 </section>
+                <div class="row">
+                    <!-- <div class="col-md-2 input-group input-file" name="Fichier1">
+                         <label>Upload Files : </label>
+                        <input type="text" class="form-control" disabled="disabled" placeholder='Choose a file...' />
+                    </div>
+                    <div class="col-md-2">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn_default btn-block btn-choose">Browse</button></span>
+                    </div>
+                    <div class="col-md-2 ">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-warning btn-reset btn-block ">Submit</button></span>
+                    </div> -->
+                    <div class="form-group w-75">
+                        <div class="input-group input-file" name="Fichier1">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" disabled="disabled" placeholder='Choose a file...' />
+                            </div>
+                           
+                            <div class="col-md-2">
+                                <span class="input-group-btn">
+                                    <button class="btn btn_secondary btn-choose btn-block" type="button">Browse</button>
+                                </span>
+                            </div>
+                            <div class="col-md-2">
+                                <span class="input-group-btn">
+                                    <button class="btn btn_default btn-reset btn-block" type="button">Upload</button>
+                                </span>
+                            </div>
+                           
+                           
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="row mt-3">
+           <div class="col-md-6">
+                <div class="card">
+                    <section class="p-3">
+                        <!-- <div class="header"> -->
+                        <h4 class="d-inline-block underline">Skills</h4>
+                        <button type="button" class="btn btn_secondary pull-right" (click)="addSkills()"><i class="fa fa-plus"
+                            aria-hidden="true"></i> Add Skill</button>
+
+                     
+                        <!-- </div> -->
+                    </section>
+                    <div *ngIf="addskills" class="cardd ml-3 mr-3">
+                        <div class="row p-md-3">
+                            <div class="col-md-4 form-group float_label">
+                                <input type="email" class="form-control" id="pname" name="pname" placeholder="&nbsp;">
+                                <label for="pname"> Skills</label>
+                            </div>
+                            <div class="col-md-4 form-group float_label">
+                                <input type="email" class="form-control" id="pname" name="pname" placeholder="&nbsp;">
+                                <label for="pname"> Level Id</label>
+                            </div>
+                            <div class="col-md-2 align-self-center">
+                                <button type="button" class="btn btn_secondary btn-block">save</button>
+                            </div>
+                            <div class="col-md-2 align-self-center">
+                                <button type="button" class="btn btn_default btn-block"
+                                    (click)="closeSkills()">clear</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pl-3">
+                        <!-- <div class="card-body"> -->
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Skill Name</th>
+                                        <th>Level Id</th>
+                                        <th>Action</th>
+    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Java</td>
+                                        <td>5</td>
+    
+                                        <td><i class="fa fa-pencil" aria-hidden="true"></i>
+                                        </td>
+                                    </tr>
+    
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="card">
+                    <section class="p-3">
+                        <!-- <div class="header"> -->
+                        <h4 class="d-inline-block underline">Certification</h4>
+                        
+
+                            <button type="button" class="btn btn_secondary pull-right" (click)="addCertifications()"><i class="fa fa-plus"
+                                aria-hidden="true"></i> Add Certification</button>
+                        <!-- </div> -->
+                    </section>
+    
+                    <div *ngIf="addcertification" class="cardd ml-3 mr-3">
+                        <div class="row p-3">
+                            <div class="col-md-4 form-group float_label">
+                                <input type="email" class="form-control" id="pname" name="pname" placeholder="&nbsp;">
+                                <label for="pname"> Certification Name</label>
+                            </div>
+                            <div class="col-md-4 form-group float_label">
+                                <input type="email" class="form-control" id="pname" name="pname" placeholder="&nbsp;">
+                                <label for="pname"> Issued By</label>
+                            </div>
+                            <div class="col-md-4 form-group float_label">
+                                <input type="email" class="form-control" id="pname" name="pname" placeholder="&nbsp;">
+                                <label for="pname"> Date</label>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center pb-3">
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn_secondary btn-block">save</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn_default btn-block"
+                                    (click)="closeCertifications()">clear</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="pl-3">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Certification Name</th>
+                                        <th>Issued By</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Action</td>
+                                        <td>TCS</td>
+                                        <td>17-01-2020</td>
+                                        <td><i class="fa fa-pencil" aria-hidden="true"></i>
+                                        </td>
+                                    </tr>
+    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div> 
+</div>

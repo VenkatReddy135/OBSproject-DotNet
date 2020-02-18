@@ -1,0 +1,13 @@
+@import "../../../../styles.scss";
+
+.float_label .form-control,
+.float_label select {
+  width: 360px !important;
+}
+
+@media (max-width: 576px) {
+  .float_label .form-control,
+  .float_label select {
+    width: auto !important;
+  }
+}

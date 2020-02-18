@@ -1,0 +1,38 @@
+@import "../../../styles.scss";
+
+
+
+// .form-control{
+//   border-top: none!important;
+//   border-left: none!important;
+//   border-right: none!important;
+//   border-radius:0px;
+//   width: 340px;
+// }
+.eye {
+  margin: -25px 10px 0 0;
+}
+.float_label .form-control:placeholder-shown:not(:focus) + * {
+ 
+  left: 0px !important;
+ 
+}
+.float_label .form-control,
+.float_label select {
+  width: 300px;
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

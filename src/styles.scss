@@ -1,0 +1,422 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+$themeColor: white;
+$colorPrimary: #f39d19;
+$colorSecondary: #1d62a7;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+li,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+.themeColorActive {
+  background-color: $colorPrimary;
+}
+.m-b-0 {
+  margin-bottom: 0rem !important;
+}
+.p-t-0 {
+  padding-top: 0rem !important;
+}
+.p-b-0 {
+  padding-bottom: 0rem !important;
+}
+.m-t-15 {
+  margin-top: 1rem;
+}
+.bg-clr-primary {
+  background-color: $colorPrimary;
+}
+.bg-clr-secondary {
+  background-color: $colorSecondary;
+}
+.font-size-14 {
+  font-size: 14px;
+}
+.btn-primary {
+  color: #ffffff;
+  background-color: $colorPrimary;
+  border-radius: 33px;
+
+  &:not(.disabled):active,
+  &:not(:disabled):not(.disabled):active {
+    background: $colorPrimary;
+    color: #ffffff;
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid $colorPrimary;
+  }
+  &.disabled,
+  &:disabled {
+    background: #c9c9d3;
+    border-color: #c9c9d3;
+  }
+  &:hover {
+    background-color: white;
+    border-color: $colorPrimary;
+    color: $colorPrimary;
+  }
+  &:focus {
+    background: $colorPrimary;
+    color: #ffffff;
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid $colorPrimary;
+  }
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/*.btn_secondary {
+  color: #ffffff;
+  background-color: $colorSecondary;
+  border-radius: 33px;
+}
+
+
+
+.btn_secondary:hover {
+  background-color: white;
+  border-color: $colorSecondary;
+  color: $colorSecondary;
+}*/
+.btn_default {
+  border-radius: 33px;
+  border: 1px solid #707070;
+}
+
+
+.btn_secondary {
+  border: 1px solid #1d62a7;
+  color: #1d62a7;
+  background-color: transparent;
+  border-radius: 33px;
+}
+.btn_secondary:hover {
+  border: 1px solid #1d62a7;
+  color: #fff;
+  background-color: #1d62a7;
+  border-radius: 33px;
+}
+
+.float_label {
+  display: block;
+  position: relative;
+  margin-bottom: 25px;
+  background: none;
+}
+.float_label label,
+.float_label > span {
+  position: absolute;
+  cursor: text;
+  font-size: 80%;
+  opacity: 0.7;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  top: -0.6em;
+  left: 0.75rem;
+  z-index: 3;
+  line-height: 1;
+  padding: 0 1px;
+  pointer-events: none;
+}
+.float_label label::after,
+.float_label > span::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  background: #fff;
+  height: 2px;
+  top: 50%;
+  left: -0.2em;
+  right: -0.2em;
+  z-index: -1;
+}
+.float_label .form-control::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.float_label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+  opacity: 0;
+}
+.float_label .form-control::-moz-placeholder {
+  opacity: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.float_label .form-control:placeholder-shown:not(:focus)::-moz-placeholder {
+  opacity: 0;
+}
+.float_label .form-control:placeholder-shown:not(:focus) + * {
+  font-size: 14px;
+  opacity: 0.9;
+  top: 1rem;
+  left: 20px;
+  font-weight: 400;
+  // color: $colorPrimary;
+  color: black;
+}
+.input-group .float_label {
+  display: table-cell;
+}
+.input-group .float_label .form-control {
+  border-radius: 0.25rem;
+}
+.input-group .float_label:not(:last-child),
+.input-group .float_label:not(:last-child) .form-control {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0;
+}
+.input-group .float_label:not(:first-child),
+.input-group .float_label:not(:first-child) .form-control {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.float_label .form-control:focus {
+  color: #666666;
+  background-color: none;
+  border-color: $colorPrimary;
+  outline: 0;
+  box-shadow: none;
+}
+.float_label.rt_icon {
+  width: calc(100% - 50px);
+}
+
+.float_label .form-control,
+.float_label select {
+  width: auto;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #ced4da;
+  height: calc(2.5rem + 4px);
+  font-size: 1rem;
+  background: none;
+  &:focus {
+    color: #666666;
+    background-color: none;
+    border-color: $colorPrimary;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+.modal .float_label .form-control,
+.float_label select {
+  width: 200px !important;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $colorPrimary;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $colorPrimary;
+}
+.masters {
+  // .card {
+  //   margin-top: 20px;
+  // }
+  .edit-save-div {
+    input {
+      border-radius: 4px;
+    }
+  }
+
+  .card-body {
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+}
+
+.card {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 10px #00000014;
+  border-radius: 8px;
+  opacity: 1;
+  border: none;
+}
+
+.fa-pencil {
+  font-size: 19px;
+  color: $colorSecondary;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.table thead th {
+  border-top: none;
+  //color: #686868;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 18px; //16px
+  color: #676666;
+    font-weight: 500;
+}
+// .table tbody td {
+//   color: #757575;
+// }
+
+.table td {
+  font-size: 16px;
+  padding: 12px;
+}
+
+.table th {
+  padding: 10px;
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+.has-search input {
+  border-radius: 17px;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.underline {
+  border-bottom: 1px solid #70707029;
+  padding-bottom: 7px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 37px;
+  height: 17px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 1px;
+  bottom: 0.4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #509800;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #509800;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(19px);
+  -ms-transform: translateX(19px);
+  transform: translateX(19px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.ngx-pagination .current {
+  padding: 5px !important;
+  background: white !important;
+  color: $colorSecondary !important;
+  cursor: pointer !important;
+}
+.ngx-pagination a,
+.ngx-pagination button {
+  padding: 5px !important;
+}
+button.openbtn.hide {
+  width: 100%;
+  text-align: left;
+}
+
+@media (max-width: 1460px) {
+  .table thead th {
+    font-size: 14px;
+  }
+  .table td {
+    font-size: 14px;
+    padding: 7px;
+  }
+  .form-group.has-search {
+    margin-top: 15px;
+}
+button.btn.btn_secondary.btn-block {
+  margin-top: 5px;
+  /* width: 50%; */
+}
+}
+
+@media (max-width: 576px) {
+  .masters {
+    .card {
+      margin-top: 42px;
+    }
+
+  }
+  .form-group.has-search {
+    margin-top: 15px;
+}
+button.btn.btn_secondary.btn-block {
+  margin-top: 5px;
+  /* width: 50%; */
+}
+}
+.edit-save-div {
+  margin-bottom: 10px;
+  /* padding: 10px; */
+}

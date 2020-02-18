@@ -1,0 +1,72 @@
+@import "../../../../../styles.scss";
+
+.basic_info{
+
+    // .card {
+    //     width: 45%;
+    //     // margin-top: 10px;
+    //   }
+      
+      .card-body {
+        padding-top: 10px;
+        padding-bottom: 0px;
+      }
+      .p-t-10{
+          padding-top: 10px;
+      }
+      .heading_underline{
+          border-bottom: 1px solid #70707029;
+      }
+      .m-b-0{
+          margin-bottom: 0rem;
+      }
+      .crd-hdng-fonts{
+          color: #161616;
+        font-weight: bold;
+      }
+    //   .padding_top_heading{
+    //       padding: 16px;
+    //   }
+      
+}
+
+@media (max-width: 1460px) {
+    .basic_info{
+      h4{
+          font-size:16px;
+      }
+      p{
+          font-size: 14px;
+      }
+    }
+  }
+
+// @media(max-width:576px){
+//     .basic_info{
+//         .card{
+//             width: 100%;
+//         }
+//     }
+// }
+.btn_default {
+  color: #1d62a7;
+  border-radius: 33px;
+  border: 1px solid #1d62a7;
+}
+.btn_default:hover{
+  color: #1d62a7;
+  border-radius: 33px;
+  border: 1px solid #1d62a7;
+}
+
+
+.btn_primary {
+  color: #fff;
+  border-radius: 33px;
+  background-color:  #1d62a7;
+}
+.btn_primary:hover{
+  color: #fff;
+  border-radius: 33px;
+  background-color:  #1d62a7;
+}

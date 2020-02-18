@@ -1,0 +1,128 @@
+@import "../../../../../styles.scss";
+
+
+ 
+
+  .card-body {
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+  .p-t-10 {
+    padding-top: 10px;
+  }
+  // .heading_underline {
+  //   border-bottom: 1px solid #70707029;
+  // }
+  .dwnld-icon {
+    border: 2px solid $colorSecondary;
+    padding: 4px;
+    border-radius: 50%;
+    color: $colorSecondary;
+  }
+  .underline {
+    border-bottom: 1px solid #70707029;
+    padding-bottom: 7px;
+  }
+  .addicon {
+    font-size: 20px;
+  }
+
+  .m-b-0 {
+    margin-bottom: 0rem;
+  }
+  .crd-hdng-fonts {
+    color: #161616;
+    font-weight: bold;
+  }
+  // .padding_top_heading {
+  //   padding: 16px 48px 16px 48px;
+  // }
+
+  // .educa_info {
+  //   // .card {
+  //   //   width: 100%;
+  //   // }
+  //   // .padding_top_heading {
+  //   //   padding: 16px 48px 16px 30px;
+  //   // }
+  // }
+
+  .skills {
+    // .card {
+    //   width: 48%;
+    //   margin-top: 10px;
+    // }
+    .cardd {
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 10px #00000014;
+      border-radius: 8px;
+      opacity: 1;
+    }
+  }
+
+
+  .inputBtnSection{
+    display:inline-block;
+    vertical-align:top;
+    font-size:0;
+  font-family:Open Sans;
+  margin-top:50px;
+  margin-left:90px;
+}
+.disableInputField{
+    display:inline-block;
+    vertical-align:top;
+    height: 27px;
+    margin: 0;
+    font-size:16px;
+    padding:0 3px;
+}
+
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+    border:solid 1px gray;
+    display:inline-block;
+    vertical-align:top;
+}
+.uploadBtn{
+    display:inline-block;
+    vertical-align:top;
+    
+    font-size:16px;
+    padding:0 10px;
+    height:25px;
+   
+    color:#2b2b2b;
+  background:#bdbdbd;
+  font-weight:normal;
+}
+
+.fileUpload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+#upload{
+  font-size:16px;
+  display:block;
+  margin-left:100px;
+ 
+}
+
+
+
+@media (max-width: 576px) {
+  .edu_exp {
+    .card {
+      width: 100%;
+    }
+   
+  }
+}

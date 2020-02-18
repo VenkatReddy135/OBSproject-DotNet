@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <div class="p-3">
+    <section class="dependents">
+        <div class="card">
+            <section class="p-md-3">
+                <div class="d-inline-block underline">
+                    <h4>Dependents</h4>
+                </div>
+                <div class="d-inline-block pull-right">
+                    <button type="button" class="btn btn_secondary" (click)="addDependents()"><i class="fa fa-plus"
+                            aria-hidden="true"></i> Add Dependents</button>
+                </div>
+            </section>
+            <div *ngIf="addDependent" class="ml-3 mr-3">
+                <div class="card">
+                    <div class="card-body p-md-3">
+
+                        <div class="row">
+                            <div class="col-md-3 form-group float_label">
+                                <input type="email" class="form-control" id="pname" name="pname" placeholder="&nbsp;">
+                                <label for="pname"> Enter Name</label>
+                            </div>
+                            <div class="col-md-3 form-group float_label">
+                                <select class="form-control" id="sel1">
+                                    <option value="" selected disabled>Choose Relation *</option>
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Brother</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 form-group float_label">
+                                <input type="email" class="form-control" id="pname" name="pname" placeholder="&nbsp;">
+                                <label for="pname"> Date of Birth</label>
+                            </div>
+                            <div class="col-md-3 form-group float_label row">
+                                <button type="button" class="btn btn_secondary col-md-4">Save</button>
+                                <button type="button" class="btn btn_secondary col-md-4 ml-md-3" (click)="cancelDependent()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-md-3">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Relation</th>
+                                    <th>Date of Birth</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Razak</td>
+                                    <td>father</td>
+                                    <td>15 Dec 1997</td>
+                                    <td><i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                <div class="d-flex justify-content-end">
+                    <pagination-controls (pageChange)="p = $event" class="mr-3"></pagination-controls>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>

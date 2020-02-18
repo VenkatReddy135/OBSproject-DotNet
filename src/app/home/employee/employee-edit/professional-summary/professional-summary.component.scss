@@ -1,0 +1,57 @@
+@import "../../../../../styles.scss";
+.mw-100 {
+    max-width: 70%!important;
+}
+
+.dwnld-icon{
+    border: 2px solid $colorSecondary;
+    padding: 4px;
+    border-radius: 50%;
+    color:$colorSecondary;
+}
+.plus-icon{
+    border: 2px solid $colorSecondary;
+    padding: 4px;
+    padding-bottom: 1px;
+    border-radius: 50%;
+    color:$colorSecondary;
+}
+.choose-file{
+  border: none !important;
+  cursor: auto;
+  background-color: white;
+}
+.resp-div{
+  display: inline-block;
+}
+.dot_bar {
+    //display: block;
+   
+    ul {
+      list-style: none;
+      padding-left: 0px;
+      li {
+        width: 8px;
+        height: 8px;
+        // padding: 7px 15px;
+        background: #c9c9d3;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 20px;
+        &:first-child {
+          margin-left: 0px;
+        }
+        &.completed {
+          background:$colorSecondary;
+        }
+        &.current {
+          background: grey;
+        }
+      }
+    }
+  }
+  @media(max-width:576px){
+    .resp-div{
+      display: block;
+    }
+  }

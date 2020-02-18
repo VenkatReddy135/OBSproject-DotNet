@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row" style="height: 100vh;">
+        <div class="col-md-7 h-100 w-100 row themeColorActive">
+
+            <div class="my-auto mx-auto">
+                <p>praneeth</p>
+            </div>
+        </div>
+        <div class="col-md-5 h-100 w-100 row">
+            <div class="my-auto mx-auto">
+                <form [formGroup]="loginForm" (submit)="onLogin(loginForm.value)">
+                   
+                    <div class="form-group float_label">
+                        
+                        <input type="text" formControlName="userName" class="form-control" placeholder="&nbsp;">
+                        <label>User Name</label>
+                    </div>
+                    <div class="form-group float_label position-relative">
+
+                        <input type="password" class="form-control" placeholder="&nbsp;" formControlName="password"
+                            autocomplete="off">
+                        <label>password</label>
+                        <i *ngIf="eye" class="fa fa-eye pull-right eye" (click)="eyeHide()"></i>
+                        <i *ngIf="slasheye" class="fa fa-eye-slash pull-right eye" (click)="eyeHide()"></i>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

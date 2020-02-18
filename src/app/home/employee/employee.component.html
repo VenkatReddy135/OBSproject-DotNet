@@ -1,0 +1,53 @@
+<!-- <p>employee works!</p>
+<button class="btn mx-auto footer btn-sm" style="background-color: #1d62a7;color: white;padding: 5px 25px;"
+            [routerLink]="['employeeedit/',18162]">More Info</button> -->
+            <div class="container-fluid">
+                <section class="pl-3 pr-3">
+                    <div class="d-inline-block col-md-4">
+                        <div class="form-group has-search">
+                            <i class="fa fa-search form-control-feedback"></i>
+                            <input type="text" class="form-control border-0" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="d-inline-block pull-right">
+                        <button type="button" class="btn btn_secondary" ><i class="fa fa-plus"
+                            aria-hidden="true"></i> Add Employee</button>
+                    </div>
+                </section>
+                <section class="pl-3 pr-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped cursor-pointer table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Profile</th>
+                                            <th>Name</th>
+                                            <th>Employee ID</th>
+                                            <th>Email</th>
+                                            <th>Mobile Number</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let c of duplicateData | paginate: { itemsPerPage: 3, currentPage: p }" [routerLink]="['employeeedit/',18162]">
+                                            <td>{{c.profile}}</td>
+                                            <td>{{c.name}}</td>
+                                            <td>{{c.employee_id}}</td>
+                                            <td>{{c.email}}</td>
+                                            <td>{{c.mobile}}</td>
+                                            <td>{{c.status}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <pagination-controls (pageChange)="p = $event" class="mr-3"></pagination-controls>
+                        </div>
+            
+            
+                    </div>
+            
+                </section>
+            </div>

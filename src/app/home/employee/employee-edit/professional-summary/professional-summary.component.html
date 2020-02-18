@@ -1,0 +1,232 @@
+<div class="container-fluid">
+    <div>
+    <section class="card m-3 p-3">
+        <div class="header">
+            <h6 class="d-inline-block underline">Proffessional Summary</h6>
+            <i class="fa fa-download pull-right dwnld-icon" aria-hidden="true"></i>
+        </div>
+        <div >
+          
+            <div class="form-group">
+                <div class="input-group input-file" >
+                   
+                        <input type="text" disabled="disabled" placeholder='Upload Files' class="choose-file">
+                  
+                  <div class="resp-div">
+                    <button class="btn btn_secondary btn-choose mr-3" type="button">Browse</button>
+                
+              
+                   
+                    <button class="btn btn_default" type="button">Submit</button>
+                  </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="card m-3 p-3">
+        <div class="header">
+            <h6 class="d-inline-block underline">Project Details</h6>
+
+            <button type="button" class="btn btn_secondary pull-right" (click)="addproject()"><i class="fa fa-plus"
+                aria-hidden="true"></i> Add Project</button>
+
+           <!--<i class="fa fa-plus pull-right plus-icon" aria-hidden="true" data-toggle="modal"
+                data-target="#add-project"></i>-->
+        </div>
+
+        <table class="table table-responsive-sm">
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Tech Stack</th>
+                    <th>Customer</th>
+                    <th>Location</th>
+                    <th>Project Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rmg</td>
+                    <td>12/4/19</td>
+                    <td>12/17/19</td>
+                    <td>obs</td>
+                    <td>techmahindra</td>
+                    <td>AndhraPradesh</td>
+                    <td>running
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+
+
+
+
+<div class="modal" id="add-project">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title">Add Project Details</h6>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="col-12">
+                    <div class="dot_bar row">
+                        <ul class="d-inline mx-auto">
+                            <li [ngClass]="(step1==true)?value2:value1"></li>
+                            <li [ngClass]="(step2==true)?value3:value1"></li>
+                            <li [ngClass]="(step3==true)?value4:value1"></li>
+                        </ul>
+                    </div>
+                    <form>
+                        <ng-template [ngIf]="firstform">
+                            <fieldset class="mb-4">
+                                <h6>Basic Details</h6>
+                                <div class="row">
+                                    <div class="col-md-6 form-group float_label">
+                                        <input type="email" class="form-control" id="pname" name="pname"
+                                            placeholder="&nbsp;">
+                                        <label for="pname"> Project Name*</label>
+                                    </div>
+                                    <div class="col-md-6 form-group float_label">
+                                        <input type="date" class="form-control" id="start" name="start"
+                                            placeholder="&nbsp;">
+                                        <label for="start">Start Date*</label>
+
+                                    </div>
+                                    <div class="col-md-6 form-group float_label">
+                                        <input type="date" class="form-control" id="end" name="end"
+                                            placeholder="&nbsp;">
+                                        <label for="end"> End Date*</label>
+
+                                    </div>
+                                    <div class="col-md-6 form-group float_label">
+                                        <input type="email" class="form-control" id="loc" name="loc"
+                                            placeholder="&nbsp;">
+                                        <label for="loc">Location*</label>
+
+                                    </div>
+                                    <div class="col-md-6 form-group float_label">
+                                        <input type="email" class="form-control" id="tech" name="tech"
+                                            placeholder="&nbsp;">
+                                        <label for="tech">Project Tech Stack</label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <button id="step1" type="button" class="next btn btn_secondary ml-auto" (click)="first()">Continue</button>
+                                </div>
+
+
+                            </fieldset>
+                        </ng-template>
+                        <ng-template [ngIf]="secondform">
+                            <fieldset>
+                                <h6>Billing Summary</h6>
+                                <div class="float_label">
+                                    <div class="row">
+                                        <div class="col-md-6 form-group float_label">
+                                            <input type="email" class="form-control" id="pname" name="pname"
+                                                placeholder="&nbsp;">
+                                            <label for="pname"> Contract ID*</label>
+                                        </div>
+                                        <div class="col-md-6 form-group float_label">
+                                            <input type="date" class="form-control" id="start" name="start"
+                                                placeholder="&nbsp;">
+                                            <label for="start">Rate ID*</label>
+
+                                        </div>
+                                        <div class="col-md-6 form-group float_label">
+                                            <input type="date" class="form-control" id="end" name="end"
+                                                placeholder="&nbsp;">
+                                            <label for="end">Billing ID*</label>
+
+                                        </div>
+                                        <div class="col-md-6 form-group float_label">
+                                            <label for="sel1">GST Applicable*</label>
+                                            <select class="form-control" id="sel1">
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                               
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <button id="back1" type="button" class="btn btn_secondary mr-auto" (click)="back1()">Previous</button>
+                                    <button id="step2" type="button" class="btn btn_secondary ml-auto" (click)="second()">Continue</button>
+                                </div>
+
+                            </fieldset>
+
+                        </ng-template>
+                        <ng-template [ngIf]="thirdform">
+                            <fieldset>
+                                <h6>Project Summary</h6>
+                                <div class="float_label">
+                                    <div class="row">
+                                        <div class="col-md-6 form-group float_label">
+                                            <input type="email" class="form-control" id="pname" name="pname"
+                                                placeholder="&nbsp;">
+                                            <label for="pname">Customer*</label>
+                                        </div>
+                                        <div class="col-md-6 form-group float_label">
+                                            <input type="date" class="form-control" id="start" name="start"
+                                                placeholder="&nbsp;">
+                                            <label for="start">Project Type*</label>
+
+                                        </div>
+                                        <div class="col-md-6 form-group float_label">
+                                            <input type="date" class="form-control" id="end" name="end"
+                                                placeholder="&nbsp;">
+                                            <label for="end">Project Status*</label>
+
+                                        </div>
+                                        <div class="col-md-6 form-group float_label">
+                                            <input type="email" class="form-control" id="loc" name="loc"
+                                                placeholder="&nbsp;">
+                                            <label for="loc">BDM Contact*</label>
+
+                                        </div>
+                                        <div class="col-md-6 form-group float_label">
+
+                                            <label for="sel1">Select list:</label>
+                                            <select class="form-control" id="sel1">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <button id="back2" type="button" class="btn btn_secondary mr-auto" (click)="back2()">Previous</button>
+                                    <button id="step3" class="next btn btn_secondary ml-auto"
+                                        (click)="third()" type="button">Save</button>
+                                </div>
+                            </fieldset>
+                        </ng-template>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
